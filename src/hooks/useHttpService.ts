@@ -7,6 +7,7 @@ export interface CacheObject {
   response: string;
 }
 
+export type RequestMethod = "GET" | "POST" | "DELETE" | "PATCH" | "PUT"
 export interface FinalObject {
   data: AxiosResponse<Response> | null;
   error: boolean;
@@ -32,7 +33,7 @@ export const useHttpService = () => {
 
   const handleService = (
     url: string,
-    requestMethod: "GET",
+    requestMethod: RequestMethod,
     reFetch: boolean
   ) => {
     const finalObject: FinalObject = {
