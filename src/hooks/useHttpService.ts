@@ -24,7 +24,6 @@ export const httpService: AxiosInstance = axios.create({
   baseURL: httpBaseURL,
   headers: {
     "Content-Type": "application/json",
-    "bundle-Id": "me.axon.phr",
   },
 });
 
